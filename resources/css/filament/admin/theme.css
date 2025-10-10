@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --radius: 12px;
+}
+
+/* Subtle rounding & shadows */
+.fi-btn, .fi-ta, .fi-input, .fi-select, .fi-badge, .fi-section, .fi-card {
+  border-radius: var(--radius);
+}
+
+.fi-sidebar {
+  backdrop-filter: saturate(120%) blur(6px);
+}

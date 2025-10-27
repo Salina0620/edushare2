@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <style>
+  .zigzag{ display:none !important; }
+</style>
+
     <x-slot name="header">
         <div class="max-w-6xl mx-auto px-4 lg:px-6 flex items-center justify-between">
             <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Upload a New Note</h2>

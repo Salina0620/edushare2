@@ -281,6 +281,10 @@
     </footer>
 
 
+    {{-- Floating Groups CTA --}}
+{{-- Floating Groups CTA (always visible) --}}
+@php $pendingInvites = 0; @endphp
+<x-group-cta :show="true" :pending-count="$pendingInvites" />
 
 
     <script>
@@ -304,6 +308,9 @@
             });
         })();
     </script>
+
+
+
 
     @livewireScripts
 </body>

@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <style>
+  .zigzag{ display:none !important; }
+</style>
+
     <x-slot name="header">
         <h2 class="text-2xl md:text-3xl font-extrabold grow">
             Recommended for you

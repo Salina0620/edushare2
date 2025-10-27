@@ -1,4 +1,9 @@
 <x-app-layout>
+
+  <style>
+  .zigzag{ display:none !important; }
+</style>
+
     {{-- HERO --}}
     <x-slot name="header">
         <div class="flex items-center gap-3">

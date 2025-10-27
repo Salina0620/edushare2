@@ -8,6 +8,10 @@ use App\Http\Controllers\RecommendationController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\SavedController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\GroupChatController;
+
+
 
 
 
@@ -33,8 +37,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Bookmarks
     Route::get('/bookmarks', [NoteController::class, 'bookmarks'])->name('notes.bookmarks');
 
+    Route::get('/groups', [GroupController::class, 'index'])->name('groups.index');
+    Route::get('/groups/create', [GroupController::class, 'create'])->name('groups.create');
+    Route::post('/groups', [GroupController::class, 'store'])->name('groups.store');
+    Route::post('/groups/{group}/join', [GroupController::class, 'join'])->name('groups.join');
 
-
+    Route::get('/groups/{group}/chat', [GroupChatController::class, 'index'])->name('groups.chat');
+    Route::post('/groups/{group}/chat', [GroupChatController::class, 'store'])->name('groups.chat.store');
+    Route::post('/groups/{group}/leave', [GroupController::class, 'leave'])
+        ->name('groups.leave');
 });
 
 //public notes

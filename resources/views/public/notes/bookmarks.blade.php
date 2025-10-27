@@ -3,6 +3,9 @@
   <h1 class="text-2xl md:text-3xl font-extrabold text-white">Saved</h1>
 </x-slot>
 
+<style>
+  .zigzag{ display:none !important; }
+</style>
 
   @if ($notes->count() === 0)
     <div class="rounded-xl border bg-white p-8 text-center">

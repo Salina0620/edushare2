@@ -10,6 +10,8 @@ class AuthServiceProvider extends ServiceProvider
 {
     protected $policies = [
         Note::class => NotePolicy::class,
+        \App\Models\Group::class => \App\Policies\GroupPolicy::class,
+
     ];
 
     public function boot(): void

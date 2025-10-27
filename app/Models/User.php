@@ -87,8 +87,22 @@ class User extends Authenticatable implements FilamentUser, HasName
     // }
 
 
-public function likes()     { return $this->hasMany(\App\Models\Like::class); }
-public function bookmarks() { return $this->hasMany(\App\Models\Bookmark::class); }
+    public function likes()
+    {
+        return $this->hasMany(\App\Models\Like::class);
+    }
+    public function bookmarks()
+    {
+        return $this->hasMany(\App\Models\Bookmark::class);
+    }
 
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'group_user')->withTimestamps()->withPivot('role');
+    }
 
+    public function createdGroups()
+    {
+        return $this->hasMany(Group::class, 'created_by');
+    }
 }

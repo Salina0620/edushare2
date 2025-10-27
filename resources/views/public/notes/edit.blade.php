@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <style>
+  .zigzag{ display:none !important; }
+</style>
+
     {{-- HEADER --}}
     <x-slot name="header">
         <div class="flex items-center justify-between">
